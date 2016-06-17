@@ -2,7 +2,8 @@ if (!global.document) {
 	global.document = {
 		body : {
 			appendChild : function() {}
-		}
+		},
+		createElement : function() {}
 	};
 }
 
