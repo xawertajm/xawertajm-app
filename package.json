@@ -1,5 +1,5 @@
 {
-  "name": "xaweratjm",
+  "name": "xawertajm",
   "version": "0.1.0",
   "description": "Xawertajm - Xell aj woxx maj kar?",
   "dependencies": {
@@ -8,9 +8,9 @@
     "classnames": "^2.2.0",
     "connect": "*",
     "define": "^1.0.1",
+    "ejs": "^2.4.2",
     "envify": "*",
     "es6-promise-polyfill": "^1.2.0",
-    "express": "^4.14.0",
     "flux": "^2.1.1",
     "global-define": "^2.2.0",
     "globify": "^1.2.1",
@@ -37,6 +37,9 @@
     "uglify-js": "*",
     "watchify": "*",
     "webpage": "^0.3.0"
+  },
+  "scripts": {
+    "build": "browserify -d app/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > app/bundle.min.js"
   },
   "author": "Matthew Croker",
   "browserify": {
