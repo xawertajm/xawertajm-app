@@ -14,9 +14,7 @@
     "radium": "^0.16.5",
     "react": "^0.14.3",
     "react-addons-linked-state-mixin": "^0.14.3",
-    "react-dom": "^0.14.7"
-  },
-  "devDependencies": {
+    "react-dom": "^0.14.7",
     "browserify": "*",
     "chai": "^3.5.0",
     "connect": "*",
@@ -38,6 +36,8 @@
     "uglify-js": "*",
     "watchify": "*",
     "webpage": "^0.3.0"
+  },
+  "devDependencies": {
   },
   "scripts": {
     "start": "watchify -v -d app/app.js -o app/bundle.js | node app.js",
