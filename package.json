@@ -1,5 +1,5 @@
 {
-  "name": "ixaris-uxf-seed",
+  "name": "xaweratjm",
   "version": "0.1.0",
   "description": "Xawertajm - Xell aj woxx maj kar?",
   "dependencies": {
@@ -36,11 +36,6 @@
     "uglify-js": "*",
     "watchify": "*",
     "webpage": "^0.3.0"
-  },
-  "devDependencies": {
-  },
-  "scripts": {
-    "start": "node ./app.js"
   },
   "author": "Matthew Croker",
   "browserify": {
