@@ -1,16 +1,16 @@
-if (!global.document) {
-	global.document = {
-		body : {
-			appendChild : function() {}
-		},
-		createElement : function() {}
-	};
-}
+// if (!global.document) {
+// 	global.document = {
+// 		body : {
+// 			appendChild : function() {}
+// 		},
+// 		createElement : function() {}
+// 	};
+// }
 
-if (!global.window) {
-	global.window = {
-					addEventListener : function(){}
-				};
+// if (!global.window) {
+// 	global.window = {
+// 					addEventListener : function(){}
+// 				};
 }
 var React = require('react');
 var ReactDom = require('react-dom');
