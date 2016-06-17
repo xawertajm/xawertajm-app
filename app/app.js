@@ -1,5 +1,5 @@
-if (!document) {
-	document = {
+if (!global.document) {
+	global.document = {
 		body : {
 			appendChild : function() {}
 		}
