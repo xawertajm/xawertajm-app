@@ -40,11 +40,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "start": "node app.js",
-    "build": "browserify -d app/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > app/bundle.min.js",
-    "test": "npm run test-node",
-    "test-node": "mocha ./__tests__/**/*.spec.js --compilers html:./node_modules/ixaris-uxf/lib/test-utils/reactTemplatesCompiler,css:./node_modules/radium-stylify/compiler,jsx:./node_modules/ixaris-uxf/lib/test-utils/jsxCompiler --reporter spec",
-    "test-x-browser": "globify ./__tests__/**/*.spec.js -x jsdom -v -d -o ./__tests__/testbundle.js && phantomjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js ./__tests__/__browser_tests__/empty.html spec \"{\\\"timeout\\\" : 200}\" && slimerjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js ./__tests__/__browser_tests__/empty.html spec \"{\\\"timeout\\\" : 500}\""
+    "start": "node app.js"
   },
   "author": "Matthew Croker",
   "browserify": {
