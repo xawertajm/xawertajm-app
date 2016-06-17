@@ -9,15 +9,13 @@ app.use(express.static(__dirname));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 
-//app.get('/', );
-
-app.route('/*').get(function(request, response) {
-	console.log('dirname', __dirname);
-  response.sendFile('index.html', {root: __dirname});
+app.get('/', function(request, response) {
+	console.log('ASASDASDASD');
+	console.log(__dirname);
+  	response.sendFile('index.html', {root: __dirname});
 });
-
 app.listen(app.get('port'), function() {
-  console.log('<<>> Node app is running on port', app.get('port'));
+  console.log('Node app is running on port', app.get('port'));
 });
 
 
