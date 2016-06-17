@@ -40,7 +40,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "start": "watchify -v -d app.js -o bundle.js | node app.js",
+    "start": "npm run build | node app.js",
     "build": "browserify -d app/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > app/bundle.min.js",
     "test": "npm run test-node",
     "test-node": "mocha ./__tests__/**/*.spec.js --compilers html:./node_modules/ixaris-uxf/lib/test-utils/reactTemplatesCompiler,css:./node_modules/radium-stylify/compiler,jsx:./node_modules/ixaris-uxf/lib/test-utils/jsxCompiler --reporter spec",

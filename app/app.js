@@ -1,3 +1,10 @@
+if (!document) {
+	document = {
+		body : {
+			appendChild : function() {}
+		}
+	};
+}
 var React = require('react');
 var ReactDom = require('react-dom');
 var Index = require('./index/Index.react');
