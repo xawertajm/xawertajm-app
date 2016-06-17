@@ -1,0 +1,68 @@
+body {
+	font-family: sans-serif;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu .toggled {
+  visibility: visible;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.page {
+  display: relative;
+  height: 500px; 
+  margin : 0 auto;
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.page h1 {
+  font-size : 60px;
+  width: 100%;
+}
+
+.page h2 {
+  font-size: 20px;
+}
+
+video {
+  z-index: -100;
+  position: fixed;
+  top : 0;
+  left: 0;
+}
+
+h1.yes {
+	color: #30a2d0;
+}
+
+h1.no {
+	color: #48481e;
+}

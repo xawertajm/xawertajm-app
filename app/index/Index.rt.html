@@ -1,0 +1,14 @@
+<rt-require dependency="ixaris-uxf/lib/Translate.react" as="Translate"/>
+<div class="page">
+    <h1 rt-class="{yes:this.obj.washCar,no:!this.obj.washCar}">
+        <Translate rt-if="!this.obj.washCar" translate="Index.INSIJA"></Translate>
+        <Translate class="yes" rt-if="this.obj.washCar" translate="Index.XAWERTAJM"></Translate>
+    </h1>
+    <h2 >
+        <Translate rt-if="this.obj.predictionBasis.daysUntilRain < 0" translate="Index.CLEAR"></Translate>
+        <Translate rt-if="this.obj.predictionBasis.daysUntilRain === 0" translate="Index.ILLUM"></Translate>
+        <Translate rt-if="this.obj.predictionBasis.daysUntilRain === 1" translate="Index.GHADA"></Translate>
+        <Translate rt-if="this.obj.predictionBasis.daysUntilRain > 1 && this.obj.predictionBasis.daysUntilRain <= 10" translate="Index.TEN" daysUntilRain={this.obj.predictionBasis.daysUntilRain}></Translate>
+        <Translate rt-if="this.obj.predictionBasis.daysUntilRain > 10" translate="Index.AKTAR" daysUntilRain={this.obj.predictionBasis.daysUntilRain}></Translate>
+    </h2>
+</div>

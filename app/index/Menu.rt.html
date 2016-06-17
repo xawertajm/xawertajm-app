@@ -1,0 +1,21 @@
+<rt-require dependency="ixaris-uxf/lib/style" as="StyleService"/>
+<rt-require dependency="./Menu.rt.css" as="Styles"/>
+<div rt-scope="StyleService.compose(Styles.liStyles) as liStyles; StyleService.compose(Styles.divStyles) as divStyle; StyleService.compose(Styles.aStyles) as aStyles"> 	
+	<ul>
+		<li key="1" style={[liStyles[this.props.kind],liStyles[this.props.size]]}>
+			<a style={aStyles[this.props.kind]} href="/screen_1" onClick={this.changeLocation}>Screen 1</a>
+		</li>
+		<li key="2" style={[liStyles[this.props.kind],liStyles[this.props.size]]}>
+			<a style={aStyles[this.props.kind]} href="/screen_2" onClick={this.changeLocation}>Screen 2</a>
+		</li>
+		<li key="3" style={[liStyles[this.props.kind],liStyles[this.props.size]]}>
+			<a style={aStyles[this.props.kind]} href="en" onClick={this.changeLocale}>English</a>
+		</li>
+		<li key="4" style={[liStyles[this.props.kind],liStyles[this.props.size]]}>
+			<a style={aStyles[this.props.kind]} href="es" onClick={this.changeLocale}>Spanish</a>
+		</li>
+		<li key="5" style={[liStyles[this.props.kind],liStyles[this.props.size]]}>
+			<a style={aStyles[this.props.kind]} href="ar" onClick={this.changeLocale}>العربية</a>
+		</li>
+	</ul> 
+</div>

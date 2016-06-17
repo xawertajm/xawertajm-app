@@ -1,0 +1,12 @@
+<rt-require dependency="classnames" as="classNames"/>
+<rt-require dependency="./FixedSideLayout.rt.css" as="FixedSideLayoutStyle"/>
+<rt-require dependency="ixaris-uxf/lib/style" as="StyleService"/>
+<div rt-scope="StyleService.compose(FixedSideLayoutStyle) as _FixedSideLayoutStyle" className={classNames({'toggled':!!this.props.toggled})}>
+    <aside id="FixedSideLayout_Side">
+        { this.firstChild() }
+    </aside>
+    <div id="FixedSideLayout_Overlay" onClick={this.props.onOverlayClick}></div>
+    <section style={_FixedSideLayoutStyle.section} id="FixedSideLayout_Container">
+        { this.allOtherChildren() }
+    </section>
+</div>

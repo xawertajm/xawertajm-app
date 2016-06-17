@@ -1,0 +1,12 @@
+{
+	"vars" : {
+		"@color-sidebar-h1" : "pink",	
+		"@color-background-default" : "blue",
+		"@normal-border" : "1px solid @color-text-default",
+		"@color-text-default" : "yellow",
+		"@color-tile-blue" : "#2195c4",
+		"@color-darktile-blue" : "#1a7498",
+		"@color-tile-red" : "#C42138",
+		"@color-darktile-red" : "#7D1D2B"
+	}
+}

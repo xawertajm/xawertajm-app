@@ -1,0 +1,29 @@
+.field {
+	width : 250px;
+	float : start;
+	margin-end : 10px;
+}
+
+.input {
+	width: 100%;
+}
+
+.list {
+	list-style-type: none;
+	display: inline-block;
+	padding-start: 5px;
+	width: 99%;
+	border: 1px solid black;
+	margin-top: 0px;
+	background-color : white;
+}
+
+.listElement {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.hidden-list {
+	visibility : hidden;
+}

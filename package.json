@@ -1,0 +1,73 @@
+{
+  "name": "ixaris-uxf-seed",
+  "version": "0.1.0",
+  "description": "Xawertajm - Xell aj woxx maj kar?",
+  "dependencies": {
+    "classnames": "^2.2.0",
+    "es6-promise-polyfill": "^1.2.0",
+    "flux": "^2.1.1",
+    "immutable": "^3.7.5",
+    "ixaris-uxf": "git+ssh://git@rndgitlab.ixaris.com:ix-tech/tools-uxframework.git",
+    "keymirror": "^0.1.1",
+    "localStorage": "^1.0.3",
+    "lodash": "^3.10.1",
+    "radium": "^0.16.5",
+    "react": "^0.14.3",
+    "react-addons-linked-state-mixin": "^0.14.3",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "chai": "^3.5.0",
+    "connect": "*",
+    "define": "^1.0.1",
+    "envify": "*",
+    "global-define": "^2.2.0",
+    "globify": "^1.2.1",
+    "jquery": "^3.0.0",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "mocha-phantomjs-core": "^2.0.1",
+    "phantomjs": "^2.1.7",
+    "radium-stylify": "*",
+    "react-addons-test-utils": "^0.14.7",
+    "react-templatify": "*",
+    "reactify": "*",
+    "serve-static": "*",
+    "slimerjs": "^0.906.1",
+    "uglify-js": "*",
+    "watchify": "*",
+    "webpage": "^0.3.0"
+  },
+  "scripts": {
+    "start": "watchify -v -d app/app.js -o app/bundle.js | node server.js",
+    "build": "browserify -d app/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > app/bundle.min.js",
+    "test": "npm run test-node",
+    "test-node": "mocha ./__tests__/**/*.spec.js --compilers html:./node_modules/ixaris-uxf/lib/test-utils/reactTemplatesCompiler,css:./node_modules/radium-stylify/compiler,jsx:./node_modules/ixaris-uxf/lib/test-utils/jsxCompiler --reporter spec",
+    "test-x-browser": "globify ./__tests__/**/*.spec.js -x jsdom -v -d -o ./__tests__/testbundle.js && phantomjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js ./__tests__/__browser_tests__/empty.html spec \"{\\\"timeout\\\" : 200}\" && slimerjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js ./__tests__/__browser_tests__/empty.html spec \"{\\\"timeout\\\" : 500}\""
+  },
+  "author": "Matthew Croker",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify",
+      [
+        "radium-stylify",
+        {
+          "styleExtension": [
+            ".rt.css"
+          ]
+        }
+      ],
+      [
+        "react-templatify",
+        {
+          "extension": [
+            ".rt.html"
+          ],
+          "targetVersion": "0.14.0"
+        }
+      ]
+    ]
+  }
+}

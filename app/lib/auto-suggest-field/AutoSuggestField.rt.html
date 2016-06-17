@@ -1,0 +1,13 @@
+<rt-require dependency="ixaris-uxf/lib/Markdown.react" as="Markdown"/>
+<rt-require dependency="ixaris-uxf/lib/style" as="StyleService"/>
+<rt-require dependency="./AutoSuggestField.rt.css" as="Style"/>
+<span rt-scope="StyleService.compose(Style) as _Style;" style={_Style.field}>
+	<div>
+		<input style={_Style.input} type="text" ref="inputSuggest" placeholder={this.props.placeholder} valueLink={this.linkState('value')}></input>
+		<div>
+			<ul rt-if="this.state.items.length" style={[_Style.list]}>
+				<li style={_Style.listElement} key={item} rt-repeat="item in this.state.items"><Markdown source={this._highlight(item)}></Markdown></li>
+			</ul>
+		</div>
+	</div>
+</span>

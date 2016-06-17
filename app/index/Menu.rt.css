@@ -1,0 +1,49 @@
+.liStyles {
+	.blue {
+		background-color : @color-background-default;
+		border : @normal-border;
+		padding-start : 25px;
+		:hover {
+			background-color : red;
+		}
+	}
+	.red {
+		background-color : red;
+		border : 1px solid black;
+		padding-start : 5px;
+	}	
+	.large {
+		font-size : 20px;
+	}
+	.small {
+		font-size : 10px;
+	}
+}
+
+.divStyles {
+	.red {
+		width: 50px;
+		float: start;
+		background-color: red;
+	}
+	.blue {
+		width: 50px;
+		float: start;
+		background-color: blue;
+	}
+	.green {
+		width: 50px;
+		float: start;
+		background-color: green;
+	}
+
+}
+
+.aStyles {
+	.blue {
+		color : @color-text-default;
+	}
+	.red {
+		color : pink;
+	}
+}

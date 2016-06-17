@@ -1,0 +1,4 @@
+.header { 
+	margin-start : 10px;
+	color : @color-sidebar-h1;
+}
