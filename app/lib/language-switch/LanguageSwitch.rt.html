@@ -1,6 +1,11 @@
 <rt-require dependency="ixaris-uxf/lib/style" as="StyleService"/>
 <rt-require dependency="./LanguageSwitch.rt.css" as="Styles"/>
-<div rt-scope="StyleService.compose(Styles.flagStyles) as flagStyles;">
-	<a href="mt" style={[flagStyles,flagStyles.malta]} onClick={this.changeLocale}></a>
-	<a href="en" style={[flagStyles,flagStyles.uk]} onClick={this.changeLocale}></a>
+<rt-require dependency="radium" as="Radium"/>
+<div rt-scope="StyleService.compose(Styles.styles) as styles;">
+	<Radium.StyleRoot>
+		<div style={styles.containerStyle}>
+			<a href="mt" style={[styles.flagStyles,styles.malta]} onClick={this.changeLocale}></a>
+			<a href="en" style={[styles.flagStyles,styles.uk]} onClick={this.changeLocale}></a>
+		</div>
+	</Radium.StyleRoot>
 </div>

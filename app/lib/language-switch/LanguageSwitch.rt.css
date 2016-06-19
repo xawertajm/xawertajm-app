@@ -1,15 +1,49 @@
-.flagStyles {
-	background-image: url('/app/media/flags.jpg');
-	height: 38px;
-	width: 57px;
-	display: block;
-	border-radius: 16px;
-	border: 1px #A3A4CA solid;
+.styles {
+	.containerStyle {
+		@media(max-width:600px) : {
+			width: 502px;
+			height: 121px;
+			top: 75%;
+			border-radius: 0 0 0 0;
+		};
+		display: block;
+		position: fixed;
+		background-color: #9CDAF3;
+		padding: 10px;
+		left: 0px;
+		top: 50%;
+		border-radius : 0 10px 10px 0px;
+	}
+
+	.flagStyles {
+		@media(max-width:600px) : {
+			background-size: 2000px;
+			height: 112px;
+			width: 189px;
+			float: left;
+		};
+		background-image: url('/app/media/flags.jpg');
+		height: 36px;
+		width: 57px;
+		display: block;
+		border-radius: 16px;
+		border: 1px #A3A4CA solid;
+		margin : 5px;
+	}
+
 	.malta {
+		@media(max-width:600px): {
+			background-position-y: 478px;
+			background-position-x: -1124px;
+		};
 		background-position-y: 145px;
 		background-position-x: -336px;
 	};
 	.uk {
+		@media(max-width:600px): {
+			background-position-y: 317px;
+			background-position-x: -468px;
+		};
 		background-position-y: 98px;
 		background-position-x: -140px;	
 	};
