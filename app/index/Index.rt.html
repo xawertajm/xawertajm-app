@@ -1,5 +1,7 @@
 <rt-require dependency="ixaris-uxf/lib/Translate.react" as="Translate"/>
+<rt-require dependency="../lib/language-switch/LanguageSwitch.react" as="LanguageSwitch"/>
 <div class="page">
+    <LanguageSwitch></LanguageSwitch>
     <h1 rt-class="{yes:this.obj.washCar,no:!this.obj.washCar}">
         <Translate rt-if="!this.obj.washCar" translate="Index.INSIJA"></Translate>
         <Translate class="yes" rt-if="this.obj.washCar" translate="Index.XAWERTAJM"></Translate>

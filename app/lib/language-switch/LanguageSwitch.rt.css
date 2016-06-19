@@ -1,0 +1,16 @@
+.flagStyles {
+	background-image: url('/app/media/flags.jpg');
+	height: 38px;
+	width: 57px;
+	display: block;
+	border-radius: 16px;
+	border: 1px #A3A4CA solid;
+	.malta {
+		background-position-y: 145px;
+		background-position-x: -336px;
+	};
+	.uk {
+		background-position-y: 98px;
+		background-position-x: -140px;	
+	};
+}

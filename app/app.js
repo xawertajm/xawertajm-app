@@ -11,7 +11,7 @@
 // 	global.window = {
 // 					addEventListener : function(){}
 // 				};
-}
+//}
 var React = require('react');
 var ReactDom = require('react-dom');
 var Index = require('./index/Index.react');

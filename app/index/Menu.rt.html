@@ -1,5 +1,5 @@
 <rt-require dependency="ixaris-uxf/lib/style" as="StyleService"/>
-<rt-require dependency="./Menu.rt.css" as="Styles"/>
+					<rt-require dependency="./Menu.rt.css" as="Styles"/>
 <div rt-scope="StyleService.compose(Styles.liStyles) as liStyles; StyleService.compose(Styles.divStyles) as divStyle; StyleService.compose(Styles.aStyles) as aStyles"> 	
 	<ul>
 		<li key="1" style={[liStyles[this.props.kind],liStyles[this.props.size]]}>

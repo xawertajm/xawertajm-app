@@ -1,0 +1,6 @@
+<rt-require dependency="ixaris-uxf/lib/style" as="StyleService"/>
+<rt-require dependency="./LanguageSwitch.rt.css" as="Styles"/>
+<div rt-scope="StyleService.compose(Styles.flagStyles) as flagStyles;">
+	<a href="mt" style={[flagStyles,flagStyles.malta]} onClick={this.changeLocale}></a>
+	<a href="en" style={[flagStyles,flagStyles.uk]} onClick={this.changeLocale}></a>
+</div>

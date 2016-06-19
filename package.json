@@ -40,6 +40,7 @@
     "webpage": "^0.3.0"
   },
   "scripts": {
+    "start": "watchify -v -d app/app.js -o app/bundle.js | node server.js",
     "build": "browserify -d app/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > app/bundle.min.js"
   },
   "author": "Matthew Croker",
