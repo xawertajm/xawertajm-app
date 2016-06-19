@@ -1,6 +1,6 @@
 .styles {
 	.containerStyle {
-		@media handheld and (max-width:600px) and (orientation: portrait) : {
+		@media(max-width:600px) : {
 			width: 502px;
 			height: 121px;
 			top: 75%;
@@ -16,7 +16,7 @@
 	}
 
 	.flagStyles {
-		@media handheld and (max-width:600px) and (orientation: portrait) : {
+		@media(max-width:600px) : {
 			background-size: 2000px;
 			height: 112px;
 			width: 189px;
@@ -32,7 +32,7 @@
 	}
 
 	.malta {
-		@media handheld and (max-width:600px) and (orientation: portrait) : {
+		@media(max-width:600px) : {
 			background-position-y: 478px;
 			background-position-x: -1124px;
 		};
