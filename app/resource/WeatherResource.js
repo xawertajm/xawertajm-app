@@ -2,7 +2,10 @@
 
 var Resource = require('ixaris-uxf').Resource;
 
-var WeatherResource = {
+var WeatherResource = new Resource('http://xawertajm-ws/result');
+
+/*
+{
 	get : function(params, cb, ecb) {
 		cb({
 			washCar : false,
@@ -15,6 +18,7 @@ var WeatherResource = {
 			}
 		});
 	}
-}//new Resource('http://jsonplaceholder.typicode.com/posts/');
+}
+ */
 
 module.exports = WeatherResource;
