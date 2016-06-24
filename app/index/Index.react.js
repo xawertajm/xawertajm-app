@@ -18,6 +18,7 @@ var Index = React.createClass({
     render: function() {
         var _this = this;
         WeatherResource.get({}, function(data) {
+            console.log(data);
             _this.obj = data;
         });
 
