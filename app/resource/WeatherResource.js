@@ -2,7 +2,7 @@
 
 var Resource = require('ixaris-uxf').Resource;
 
-var WeatherResource = new Resource('http://www.xawertajm-ws.herokuapp.com/result');
+var WeatherResource = new Resource('http://xawertajm-ws.herokuapp.com/result');
 
 /*
 {
