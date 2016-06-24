@@ -2,55 +2,49 @@ var React = require('react');
 var PureRenderMixin = require('react/lib/ReactComponentWithPureRenderMixin');
 var I18nMixin = require('ixaris-uxf').React.I18nMixin;
 require('./Index.i18n');
-var WeatherResource = require('../resource/WeatherResource');
+//var WeatherResource = require('../resource/WeatherResource');
+var WeatherStore = require('../store/WeatherStore');
+
+function getCurrentWeather() {
+	return {
+		weather : WeatherStore.Store.getWeather()
+	};
+}
 
 var Index = React.createClass({
 
-    mixins: [PureRenderMixin, I18nMixin],
+	mixins: [PureRenderMixin, I18nMixin],
 
-    getInitialState: function () {
-        return {
-            content: null,
-            modal: null
-        };
-    },
+	getInitialState: function () {
+		return {
+			weather : {
+				washCar : false,
+				predictionBasis : {
+					daysUntilRain : -1,
+				}
+			}
+		}
+	},
+	componentWillMount : function() {
+		WeatherStore.Store.addChangeListener(this._gotWeather);
+	},
 
-    render: function() {
-        var _this = this;
-        _this.obj = {
-            predictionBasis : {}
-        };
-        WeatherResource.get({}, function(data) {
-            _this.obj = data[0];
-        });
-        return require('./Index.rt.html').call(_this);
+	componentDidMount : function() {
+		WeatherStore.Actions.getWeather();
+	},
 
-    },
+	componentWillUnmount : function () {
+		WeatherStore.Store.removeChangeListener(this._gotWeather);
+	},
 
-    _setContent: function(el) {
-        this.setState({ 
-            toggled: false,
-            content: el 
-        });
-    },
 
-    _showModal: function(el) {
-        this.setState({ 
-            toggled: false,
-            modal: el 
-        });
-    },
-
-    _openMenu: function(e) {
-        e.preventDefault();
-        this.setState({ toggled: true });
-    },
-
-    _closeMenu: function(e) {
-        e.preventDefault();
-        this.setState({ toggled: false });
-    }
+	render: require('./Index.rt.html'),
+	_gotWeather: function() {
+		var weatherState = getCurrentWeather();
+		this.setState(weatherState);
+	}
 
 });
+
 
 module.exports = Index;
