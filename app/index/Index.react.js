@@ -20,9 +20,9 @@ var Index = React.createClass({
         WeatherResource.get({}, function(data) {
             console.log(data);
             _this.obj = data;
+            return require('./Index.rt.html').call(_this);
         });
 
-        return require('./Index.rt.html').call(this);
     },
 
     _setContent: function(el) {
