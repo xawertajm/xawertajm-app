@@ -17,7 +17,9 @@ var Index = React.createClass({
 
     render: function() {
         var _this = this;
-        _this.obj = {};
+        _this.obj = {
+            predictionBasis : {}
+        };
         WeatherResource.get({}, function(data) {
             _this.obj = data[0];
         });
