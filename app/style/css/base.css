@@ -20,11 +20,22 @@ body {
   font-size: 20px;
 }
 
-video {
+#bground div {
   z-index: -100;
   position: fixed;
   top : 0;
   left: 0;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#bground .xawertajm {
+  background-image: url('/app/media/xawertajm.jpg');
+}
+
+#bground .insijabro {
+  background-image: url('/app/media/insija.jpg'); 
 }
 
 h1.yes {

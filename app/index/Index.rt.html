@@ -2,9 +2,9 @@
 <rt-require dependency="../lib/language-switch/LanguageSwitch.react" as="LanguageSwitch"/>
 <div class="page">
     <LanguageSwitch></LanguageSwitch>
-    <h1 rt-class="{yes:this.state.weather.washCar,no:!this.state.weather.washCar}">
-        <Translate rt-if="!this.state.weather.washCar" translate="Index.INSIJA"></Translate>
-        <Translate class="yes" rt-if="this.state.weather.washCar" translate="Index.XAWERTAJM"></Translate>
+    <h1 rt-class="{yes:this.state.weather.washCar==='True',no:this.state.weather.washCar==='False'}">
+        <Translate rt-if="this.state.weather.washCar==='False'" translate="Index.INSIJA"></Translate>
+        <Translate class="yes" rt-if="this.state.weather.washCar==='True'" translate="Index.XAWERTAJM"></Translate>
     </h1>
     <h2 >
         <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain < 0" translate="Index.CLEAR"></Translate>
