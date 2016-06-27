@@ -12,7 +12,7 @@ I18n.register('mt', {
 
 I18n.register('en', {
     'Index.INSIJA' : 'FORGET IT BROOO',
-    'Index.XAWERTAJM' : 'SHOOWER TIIIME',
+    'Index.XAWERTAJM' : 'SHOWEER TIIIME',
     'Index.CLEAR' : '\'ts not gonna rain so far bro',
     'Index.ILLUM' : '\'ts gonna rain today bro',
     'Index.GHADA' : '\'ts gonna rain tomorrow bro',
