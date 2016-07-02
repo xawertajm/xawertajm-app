@@ -28,6 +28,12 @@ body {
 	}
 }
 
+@media(max-width: 670px) {
+	.page {
+		width: 80%;
+	}
+}
+
 #bground .bground {
 	z-index: -100;
 	position: fixed;

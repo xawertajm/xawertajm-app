@@ -10,7 +10,8 @@
         <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain < 0" translate="Index.CLEAR"></Translate>
         <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain === 0" translate="Index.ILLUM"></Translate>
         <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain === 1" translate="Index.GHADA"></Translate>
-        <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain > 1 && this.state.weather.predictionBasis.daysUntilRain <= 10" translate="Index.TEN" daysUntilRain={this.state.weather.predictionBasis.daysUntilRain}></Translate>
+        <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain === 2" translate="Index.JUMEJN"></Translate>
+        <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain > 2 && this.state.weather.predictionBasis.daysUntilRain <= 10" translate="Index.TEN" daysUntilRain={this.state.weather.predictionBasis.daysUntilRain}></Translate>
         <Translate rt-if="this.state.weather.predictionBasis.daysUntilRain > 10" translate="Index.AKTAR" daysUntilRain={this.state.weather.predictionBasis.daysUntilRain}></Translate>
     </h2>
 </div>

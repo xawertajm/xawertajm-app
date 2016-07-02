@@ -18,7 +18,7 @@ var Index = require('./index/Index.react');
 var Background = require('./background/Background.react');
 var WeatherEffect = require('./background/weather-effect/WeatherEffect.react');
 var I18n = require('ixaris-uxf/lib/i18n');
-
+I18n.setDefault("mt");
 
 require('ixaris-uxf/lib/style').Branding.load(require('./style/styleConfig.json'));
 
@@ -31,4 +31,3 @@ document.body.appendChild(div);
 ReactDom.render(React.createElement(Index), div);
 ReactDom.render(React.createElement(Background), bground);
 ReactDom.render(React.createElement(WeatherEffect), weatherEffect);
-I18n.setDefault("mt");

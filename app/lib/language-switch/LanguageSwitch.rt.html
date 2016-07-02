@@ -6,6 +6,10 @@
 		<div style={styles.containerStyle}>
 			<a href="mt" style={[styles.flagStyles,styles.malta]} onClick={this.changeLocale}></a>
 			<a href="en" style={[styles.flagStyles,styles.uk]} onClick={this.changeLocale}></a>
+			<h2 style={styles.textLanguage}>
+				<a href="en" rt-if="this.state.locale === 'mt'" style={styles.textLanguage.a} onClick={this.changeLocale}>Tell me in English</a>
+				<a href="mt" rt-if="this.state.locale === 'en'" style={styles.textLanguage.a} onClick={this.changeLocale}>Kellimni bil-Malti</a>
+			</h2>
 		</div>
 	</Radium.StyleRoot>
 </div>

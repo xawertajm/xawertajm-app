@@ -6,9 +6,10 @@
 			top: 75%;
 			border-radius: 0 0 0 0;
 		};
+
 		display: block;
 		position: fixed;
-		background-color: #9CDAF3;
+		background-color: rgba(5, 77, 105, 0.42);
 		padding: 10px;
 		left: 0px;
 		top: 50%;
@@ -18,10 +19,7 @@
 
 	.flagStyles {
 		@media(max-width:600px) : {
-			background-size: 2000px;
-			height: 112px;
-			width: 189px;
-			float: left;
+			display: none;
 		};
 		background-image: url('/app/media/flags.jpg');
 		height: 36px;
@@ -48,4 +46,18 @@
 		background-position-y: 98px;
 		background-position-x: -140px;	
 	};
+
+	.textLanguage {
+		@media(min-width: 600px) {
+			display: none;
+		};
+
+		text-align: start;
+		padding-top: 35px;
+		padding-left: 85px;
+		.a {
+			color: #FEFEFF;
+			text-decoration: none;
+		}
+	}
 }
