@@ -10,6 +10,7 @@ var hasWeather = !!sessionStorage.getItem('weather');
 function _getWeather() {
 	WeatherResource.get({}, function(data) {
 		var _weather = JSON.parse(data)[0];
+		console.log(JSON.stringify(_weather));
 		sessionStorage.setItem('weather', JSON.stringify(_weather));
 		hasWeather = true;
 		Weather.Store.emitChange();
@@ -40,7 +41,11 @@ var Weather = {
 		},
 
 		getWeather: function() {
-			return JSON.parse(sessionStorage.getItem('weather'));
+			var _weather = JSON.parse(sessionStorage.getItem('weather'));
+			if (_weather.predictionBasis && Object.keys(_weather.predictionBasis).indexOf('daysUntilRain') >= 0) {
+				_weather.predictionBasis.daysUntilRain = Number(_weather.predictionBasis.daysUntilRain);
+			}
+			return _weather;
 		},
 
 		emitChange: function() {
