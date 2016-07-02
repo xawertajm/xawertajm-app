@@ -22,18 +22,6 @@ body {
 	font-size: 20px;
 }
 
-@media(max-width: 600px) {
-	.page {
-		width: 75%;
-	}
-}
-
-@media(max-width: 670px) {
-	.page {
-		width: 80%;
-	}
-}
-
 #bground .bground {
 	z-index: -100;
 	position: fixed;
@@ -45,7 +33,41 @@ body {
 }
 
 #bground .xawertajm {
-	background-image: url('https://www.mercedes-benz.com/wp-content/uploads/sites/3/2014/08/HISTORIE_Festival_der_Sportwagen_Ikonen_12_07.jpg');
+	background-image: url('/app/media/xawertajm.jpg');
+}
+
+@media(max-width: 600px) {
+	.page {
+		width: 75%;
+	}
+
+	.effect {
+		display: none;
+	}
+
+	.page h1.yes {
+		font-size: 50px;
+		word-wrap: break-word;
+	}
+
+	#bground .xawertajm {
+		background-image: url('/app/media/xawertajm-mob.jpg');
+	}
+}
+
+@media(max-width: 670px) {
+	.page {
+		width: 80%;
+	}
+
+	.page h1.yes {
+		font-size: 60px;
+		word-wrap: break-word;
+	}
+
+	#bground .xawertajm {
+		background-image: url('/app/media/xawertajm-mob.jpg');
+	}
 }
 
 #bground .insijabro {
@@ -61,7 +83,7 @@ h2.yes {
 }
 
 h1.no {
-	color: #48481e;
+	color: #E6E6AE;
 }
 
 /*
